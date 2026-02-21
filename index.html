@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moemen Mohamed | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Moemen</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                        <span class="icon-sun">☀️</span>
+                        <span class="icon-moon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home / Hero Section -->
+    <section id="home" class="section home-section">
+        <div class="home-container">
+            <div class="home-text">
+                <p class="home-greeting">Hi, I am</p>
+                <h1 class="home-name">Moemen Mohamed</h1>
+                <p class="home-title">Cybersecurity & Networking Student</p>
+                <p class="home-bio">
+                    I'm a Computer Science student with hands-on experience and strong passion in
+                    <span class="highlight">Cyber Security</span> and Network Engineering, always learning and building real-world projects.
+                </p>
+                <div class="home-buttons">
+                    <a href="assets/CV.pdf" class="btn btn-primary" id="downloadCV" target="_blank" rel="noopener">
+                        Download CV
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        View Projects
+                    </a>
+                </div>
+                <a href="#about" class="scroll-down">
+                    <span>Scroll Down</span>
+                    <span class="scroll-icon">⌄</span>
+                </a>
+            </div>
+
+            <div class="home-image-wrapper">
+                <div class="home-image-placeholder">
+                    <img src="assets/images/moe.jpeg" alt="Moemen Mohamed">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <div class="about-image-placeholder">
+                    <img src="assets/images/ce.jpeg" alt="Moemen Mohamed - Cybersecurity & Security Analyst">
+                </div>
+            </div>
+
+            <div class="about-right">
+                <p class="about-main-text">
+                    I am a Computer Science student and aspiring <span class="highlight">Cybersecurity Analyst</span> focused on
+                    securing infrastructures, monitoring threats, and understanding how attacks really work. I enjoy working
+                    with networks, security tools, and Linux environments to detect, analyze, and respond to security incidents.
+                </p>
+                <p class="about-main-text">
+                    My goal is to grow into a professional security engineer who can investigate attacks, harden systems,
+                    and help organizations build resilient, secure environments.
+                </p>
+
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h3>Security Analysis</h3>
+                        <p>Interested in log analysis, incident investigation, and understanding attacker behavior across
+                            networks and systems.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Threat Detection</h3>
+                        <p>Passionate about detecting suspicious activity using tools like Wireshark, Nmap, and network
+                            monitoring techniques.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Network & Infrastructure</h3>
+                        <p>Comfortable working with switches, routers, firewalls, and lab simulators like Huawei eNSP and
+                            Packet Tracer.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Continuous Learning</h3>
+                        <p>Always improving skills through labs, courses, and certifications in Cybersecurity and Networking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h3>Programming</h3>
+                <ul>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🛡️</div>
+                <h3>Cybersecurity & Networking</h3>
+                <ul>
+                    <li>Kali Linux (Wireshark, Nmap, Packet Tracer)</li>
+                    <li>Linux OS</li>
+                    <li>Huawei eNSP</li>
+                    <li>Network Fundamentals</li>
+                    <li>CCNA (NTI)</li>
+                    <li>Ethical Hacker Basics</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🔧</div>
+                <h3>Tools & Platforms</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>Virtual Machines</li>
+                    <li>Command Line</li>
+                    <li>Microsoft Office</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🤝</div>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Time Management</li>
+                    <li>Communication</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-timeline">
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3 class="exp-role">Intern</h3>
+                </div>
+                <p class="exp-company">Egyptian Contracting Company - Dokki, Egypt</p>
+                <ul class="exp-list">
+                    <li>Assisted in hardware maintenance and troubleshooting, reducing downtime.</li>
+                    <li>Supported database management, ensuring data consistency and integrity.</li>
+                    <li>Provided IT support and resolved technical issues.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="exp-header">
+                    <h3 class="exp-role">Trainee</h3>
+                </div>
+                <p class="exp-company">National Telecommunication Institute (NTI), Egypt</p>
+                <ul class="exp-list">
+                    <li>Completed intensive training in Cyber Security and Networking.</li>
+                    <li>Utilized Kali Linux and Huawei eNSP for network simulations.</li>
+                    <li>Strengthened understanding of network infrastructure and threat mitigation.</li>
+                    <li>Earned CCNA certification and applied routing, switching, and network design in lab environments.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Arduino RC Car</h3>
+                <p>Mobile-controlled car using Arduino &amp; Bluetooth for remote movement and control.</p>
+                <div class="project-tags">
+                    <span>Arduino</span>
+                    <span>Bluetooth</span>
+                    <span>Embedded</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Website Checker</h3>
+                <p>Linux-based tool to monitor website uptime and basic availability status.</p>
+                <div class="project-tags">
+                    <span>Linux</span>
+                    <span>Bash</span>
+                    <span>Monitoring</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Ping Test Tool</h3>
+                <p>Automated script for testing network connectivity and latency to multiple targets.</p>
+                <div class="project-tags">
+                    <span>Networking</span>
+                    <span>Ping</span>
+                    <span>Automation</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Automated Security Alert</h3>
+                <p>Real-time alert system that detects suspicious activity and notifies the user instantly.</p>
+                <div class="project-tags">
+                    <span>Security</span>
+                    <span>Automation</span>
+                    <span>Alerts</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Subway Game</h3>
+                <p>2D graphics-based game with scoring, obstacles, and restart features.</p>
+                <div class="project-tags">
+                    <span>Game Dev</span>
+                    <span>2D</span>
+                    <span>Graphics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section certificates-section">
+        <h2 class="section-title">Certificates</h2>
+        <div class="certificates-grid">
+            <div class="certificate-item" data-cert-src="assets/certificates/AI.jpeg" data-cert-title="Artificial Intelligence">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/AI.jpeg" alt="Artificial Intelligence Certificate">
+                    <span class="certificate-zoom">+</span>
+                </div>
+                <p>Artificial Intelligence</p>
+            </div>
+            <div class="certificate-item" data-cert-src="assets/certificates/security.jpeg" data-cert-title="Cyber Security & Networking">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/security.jpeg" alt="Cyber Security & Networking Certificate">
+                    <span class="certificate-zoom">+</span>
+                </div>
+                <p>Cyber Security &amp; Networking</p>
+            </div>
+            <div class="certificate-item" data-cert-src="assets/certificates/WhatsApp%20Image%202025-09-22%20at%204.31.05%20PM.jpeg" data-cert-title="Technical Training">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/WhatsApp%20Image%202025-09-22%20at%204.31.05%20PM.jpeg" alt="Technical Training Certificate">
+                    <span class="certificate-zoom">+</span>
+                </div>
+                <p>Technical Training</p>
+            </div>
+            <div class="certificate-item" data-cert-src="assets/certificates/WhatsApp%20Image%202025-11-10%20at%2012.08.49%20PM.jpeg" data-cert-title="IT Skills & Career Development">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/WhatsApp%20Image%202025-11-10%20at%2012.08.49%20PM.jpeg" alt="IT Skills & Career Development">
+                    <span class="certificate-zoom">+</span>
+                </div>
+                <p>IT Skills &amp; Career Development</p>
+            </div>
+            <div class="certificate-item" data-cert-src="assets/certificates/شهادتي.jpeg" data-cert-title="Cybersecurity / Networking">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/شهادتي.jpeg" alt="Cybersecurity / Networking Certificate">
+                    <span class="certificate-zoom">+</span>
+                </div>
+                <p>Cybersecurity / Networking</p>
+            </div>
+            <div class="certificate-item" data-cert-src="assets/certificates/شهاده%20بنك%20مصر%20و%20مهارات%20من%20جوجل.jpeg" data-cert-title="Digital Marketing - Banque Misr & Google">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/شهاده%20بنك%20مصر%20و%20مهارات%20من%20جوجل.jpeg" alt="Fundamentals of Digital Marketing - Banque Misr & Google">
+                    <span class="certificate-zoom">+</span>
+                </div>
+                <p>Digital Marketing - Banque Misr &amp; Google</p>
+            </div>
+            <div class="certificate-item" data-cert-src="assets/certificates/مختار%20ابارهيم.jpg" data-cert-title="Technical / Training">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/مختار%20ابارهيم.jpg" alt="Technical / Training Certificate">
+                    <span class="certificate-zoom">+</span>
+                </div>
+                <p>Technical / Training</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal (lightbox) -->
+    <div class="certificate-modal" id="certificateModal" aria-hidden="true">
+        <div class="certificate-modal-backdrop"></div>
+        <div class="certificate-modal-box">
+            <button type="button" class="certificate-modal-close" id="certificateModalClose" aria-label="Close">&times;</button>
+            <img class="certificate-modal-img" id="certificateModalImg" src="" alt="">
+            <p class="certificate-modal-title" id="certificateModalTitle"></p>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-layout">
+            <div class="contact-info-column">
+                <div class="contact-card">
+                    <span class="contact-icon">✉️</span>
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:moemen.mohamed.it@gmail.com" class="contact-value">
+                        moemen.mohamed.it@gmail.com
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">📞</span>
+                    <span class="contact-label">Phone</span>
+                    <a href="tel:01500022148" class="contact-value">
+                        01500022148
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-icon">💼</span>
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/moemen-shendia" target="_blank" rel="noopener"
+                        class="contact-value">
+                        linkedin.com/in/moemen-shendia
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form-column">
+                <form class="contact-form" onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name">
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your email">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" placeholder="Write your message here"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+                    <p class="form-note">Form is static for now – you can later connect it to a backend or email
+                        service.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Moemen Mohamed</h3>
+                <p class="footer-text">
+                    Cybersecurity &amp; Networking student passionate about building secure systems, solving complex
+                    problems, and growing in the field of Information Security.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:moemen.mohamed.it@gmail.com">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/moemen-shendia" target="_blank" rel="noopener">LinkedIn</a>
+                    </li>
+                    <li><a href="tel:01500022148">Phone</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-bottom">© <span id="year"></span> Moemen Mohamed. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
