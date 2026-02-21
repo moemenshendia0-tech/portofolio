@@ -1769,3 +1769,54 @@ body.dark-mode .certificates-note {
         padding: 0.3rem 0.8rem;
     }
 }
+
+/* ===== حل مشكلة الصور على الموبايل ===== */
+
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding: 1rem !important;
+        width: 100% !important;
+    }
+
+    .project-card {
+        width: 100% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        background: var(--bg-card) !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+    }
+
+    .project-image {
+        width: 100% !important;
+        height: 220px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: #f0f0f0 !important;
+        /* خلفية مؤقتة */
+    }
+
+    .project-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+        position: relative !important;
+    }
+
+    /* للتأكد إن الصورة ظاهرة */
+    .project-image::after {
+        display: none !important;
+    }
+}
+
+/* اختبار سريع - لو ظهر لون أحمر يبقى الكود شغال */
+@media screen and (max-width: 768px) {
+    .test-mobile {
+        background: red !important;
+    }
+}
