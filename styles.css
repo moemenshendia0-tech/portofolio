@@ -296,9 +296,12 @@ body.dark-mode .theme-toggle .icon-moon {
 }
 
 @keyframes scroll-bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(4px);
     }
@@ -1026,4 +1029,53 @@ body.dark-mode .theme-toggle .icon-moon {
         width: 180px;
         height: 180px;
     }
+}
+
+/* =========================
+   FIX PROJECT CARDS CONTRAST
+========================= */
+
+/* الكارت نفسه */
+.projects-section .project-card {
+    background: #1e2f25;
+    color: #f5f7f6;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* عنوان المشروع */
+.projects-section .project-card h3 {
+    color: #ffffff;
+}
+
+/* وصف المشروع */
+.projects-section .project-card p {
+    color: #d7e2db;
+}
+
+/* التاجز */
+.projects-section .project-tags span {
+    background: #2f4a3b;
+    color: #e9f5ee;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Hover */
+.projects-section .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* لو عندك dark mode بكلاس */
+body.dark .projects-section .project-card {
+    background: #16241c;
+    color: #f1f5f3;
+}
+
+body.dark .projects-section .project-card p {
+    color: #cfe0d7;
+}
+
+body.dark .project-tags span {
+    background: #284135;
+    color: #e6f3ec;
 }
