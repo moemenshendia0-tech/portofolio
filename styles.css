@@ -1418,3 +1418,208 @@ body.dark-mode .certificates-note {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
 }
+
+/* ===== قسم الاتصال - نسخة محسنة نهائياً ===== */
+
+/* تنسيق الحاوية الرئيسية */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* تنسيق بطاقات المعلومات */
+.contact-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-subtle);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.contact-value {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    word-break: break-word;
+    line-height: 1.6;
+}
+
+/* تنسيق خاص للبريد الإلكتروني */
+.contact-card:first-child .contact-value {
+    font-size: 1.1rem;
+    background: rgba(164, 190, 123, 0.1);
+    padding: 0.75rem;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+}
+
+/* تنسيق الفورم */
+.contact-form-column {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-subtle);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-main);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--highlight);
+}
+
+.form-submit {
+    margin-top: 0.5rem;
+}
+
+.form-submit .btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+/* ===== تحسينات الموبايل - الأهم هنا ===== */
+@media screen and (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr !important;
+        /* صف واحد في الموبايل */
+        gap: 1.5rem !important;
+        padding: 0.5rem !important;
+    }
+
+    .contact-info-column {
+        gap: 1rem !important;
+    }
+
+    .contact-card {
+        padding: 1.5rem !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    /* تحسين عرض البريد الإلكتروني */
+    .contact-card:first-child .contact-value {
+        font-size: 0.95rem !important;
+        padding: 0.75rem !important;
+        word-break: break-all !important;
+        white-space: normal !important;
+        display: block !important;
+        max-width: 100% !important;
+    }
+
+    /* تحويل الفورم لصف واحد */
+    .form-row {
+        grid-template-columns: 1fr !important;
+        /* حقل تحت حقل */
+        gap: 1rem !important;
+    }
+
+    .contact-form-column {
+        padding: 1.5rem !important;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        padding: 0.875rem !important;
+        /* زيادة حجم المساحة للموبايل */
+        font-size: 1rem !important;
+    }
+
+    /* تكبير زر الإرسال */
+    .form-submit .btn {
+        padding: 1.125rem !important;
+        font-size: 1.125rem !important;
+    }
+
+    /* تحسين عرض الأيقونات */
+    .contact-icon {
+        font-size: 2rem !important;
+    }
+
+    .contact-label {
+        font-size: 1rem !important;
+    }
+}
+
+/* تحسينات للشاشات الصغيرة جداً */
+@media screen and (max-width: 380px) {
+    .contact-card {
+        padding: 1.25rem !important;
+    }
+
+    .contact-card:first-child .contact-value {
+        font-size: 0.85rem !important;
+    }
+
+    .contact-icon {
+        font-size: 1.75rem !important;
+    }
+}
