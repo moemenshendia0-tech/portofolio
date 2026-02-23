@@ -460,24 +460,29 @@
             </div>
 
             <div class="contact-form-column">
-                <form class="contact-form" onsubmit="return false;">
+                <form class="contact-form" action="https://formsubmit.co/moemen.mohamed.it@gmail.com" method="POST">
+                    <!-- حقول Hidden مهمة -->
+                    <input type="hidden" name="_subject" value="New message from Portfolio!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_next" value="https://moemenshendia0-tech.github.io/portofolio/">
+
                     <div class="form-row">
                         <div class="form-field">
                             <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Your name">
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
                         </div>
                         <div class="form-field">
                             <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Your email">
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
                         </div>
                     </div>
                     <div class="form-field">
                         <label for="message">Message</label>
-                        <textarea id="message" rows="4" placeholder="Write your message here"></textarea>
+                        <textarea name="message" id="message" rows="4" placeholder="Write your message here"
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary form-submit">Send Message</button>
-                    <p class="form-note">Form is static for now – you can later connect it to a backend or email
-                        service.</p>
                 </form>
             </div>
         </div>
