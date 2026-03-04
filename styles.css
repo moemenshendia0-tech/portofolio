@@ -1,27 +1,33 @@
 /* ===== CSS Variables - Light Mode (default) ===== */
+/* متغيرات الألوان للوضع الفاتح (Light Mode) - دي الافتراضي */
 :root {
-    --primary: #40513B;
-    --highlight: #609966;
-    --highlight-light: #A4BE7B;
-    --shadow: #9DC08B;
-    --bg-main: #EDF1D6;
-    --bg-card: #ffffff;
-    --text-primary: #1a1a1a;
-    --text-secondary: #444;
-    --nav-bg: rgba(237, 241, 214, 0.95);
-    --card-shadow: 0 4px 20px rgba(64, 81, 59, 0.15);
-    --border-subtle: rgba(64, 81, 59, 0.2);
+    --primary-color: #132F20;
+    --hover-color: #1F4A2E;
+    --hover-light: #2C6B3B;
+    --bg-color: #ffffff;
+    --text-color: #1f2937;
+    --card-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Dark Mode */
+/* متغيرات الألوان للوضع الغامق (Dark Mode) - هتتفعل بالكلاس */
 body.dark-mode {
-    --bg-main: #1a1f17;
-    --bg-card: #252d20;
-    --text-primary: #EDF1D6;
-    --text-secondary: #b8c4a8;
-    --nav-bg: rgba(26, 31, 23, 0.95);
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    --border-subtle: rgba(157, 192, 139, 0.2);
+    --primary-color: #2C6B3B;
+    /* أفتح شوية عشان يظهر في الدارك */
+    --hover-color: #3E8E4F;
+    /* لون التحويم في الدارك */
+    --hover-light: #4CAF5A;
+    /* أفتح للتدريج */
+    --bg-color: #0F1A12;
+    /* خلفية غامقة خضراء */
+    --text-color: #e5e7eb;
+    /* نصوص فاتحة */
+    --card-bg: #1A2A1F;
+    /* خلفية الكروت في الدارك */
+    --border-color: #2C3E32;
+    /* لون الحدود */
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -1819,4 +1825,75 @@ body.dark-mode .certificates-note {
     .test-mobile {
         background: red !important;
     }
+}
+
+/* تحسين تأثيرات التحويم للبطاقات */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.2), 0 8px 10px -6px rgba(37, 99, 235, 0.1);
+}
+
+/* تأثير للصور في المشاريع */
+.project-image {
+    overflow: hidden;
+}
+
+.project-image img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* تحسين أزرار التحميل */
+.btn-primary,
+.btn-secondary {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+}
+
+/* تأثير للصورة الشخصية */
+.home-image-placeholder img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.home-image-placeholder:hover img {
+    transform: scale(1.02) rotate(1deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth Scroll للصفحة كلها */
+html {
+    scroll-behavior: smooth;
+}
+
+/* تحسين مظهر الكاردات عموماً */
+.skill-card,
+.experience-card,
+.contact-card {
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover,
+.experience-card:hover,
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* تحسين Typed.js cursor */
+.typed-cursor {
+    font-size: 1.5rem;
+    color: #2563eb;
 }

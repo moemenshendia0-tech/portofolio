@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- ✅ مكتبة AOS للتأثيرات الحركية (أضفناها هنا) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,10 +43,15 @@
         </div>
     </nav>
 
-    <!-- Home / Hero Section -->
-    <section id="home" class="section home-section">
+    <!-- ======================== -->
+    <!-- هنتك من هنا نضيف التأثيرات -->
+    <!-- ======================== -->
+
+    <!-- ✅ Home / Hero Section (أضفنا التأثير على النصوص والصورة) -->
+    <section id="home" class="section home-section" data-aos="fade-up">
         <div class="home-container">
-            <div class="home-text">
+            <!-- النصوص: تظهر من الشمال -->
+            <div class="home-text" data-aos="fade-right">
                 <p class="home-greeting">Hi, I am</p>
                 <h1 class="home-name">Moemen Mohamed</h1>
                 <p class="home-title">Cybersecurity & Networking Student</p>
@@ -66,8 +73,8 @@
                     <span class="scroll-icon">⌄</span>
                 </a>
             </div>
-
-            <div class="home-image-wrapper">
+            <!-- الصورة: تظهر من اليمين -->
+            <div class="home-image-wrapper" data-aos="fade-left">
                 <div class="home-image-placeholder">
                     <img src="assets/images/moe.jpeg" alt="Moemen Mohamed">
                 </div>
@@ -75,17 +82,18 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <h2 class="section-title">About Me</h2>
+    <!-- ✅ About Section (القسم الرئيسي والنصوص والبطاقات) -->
+    <section id="about" class="section about-section" data-aos="fade-up">
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
         <div class="about-container">
-            <div class="about-image-wrapper">
+            <!-- صورة About: تظهر من الشمال -->
+            <div class="about-image-wrapper" data-aos="fade-right">
                 <div class="about-image-placeholder">
                     <img src="assets/images/ce.jpeg" alt="Moemen Mohamed - Cybersecurity & Security Analyst">
                 </div>
             </div>
 
-            <div class="about-right">
+            <div class="about-right" data-aos="fade-left">
                 <p class="about-main-text">
                     I am a Computer Science student and aspiring <span class="highlight">Cybersecurity Analyst</span>
                     focused on
@@ -99,26 +107,24 @@
                     systems,
                     and help organizations build resilient, secure environments.
                 </p>
-
+                <!-- بطاقات About: تظهر الواحدة تلو الأخرى -->
                 <div class="about-cards">
-                    <div class="about-card">
+                    <div class="about-card" data-aos="zoom-in" data-aos-delay="100">
                         <h3>Security Analysis</h3>
                         <p>Interested in log analysis, incident investigation, and understanding attacker behavior
-                            across
-                            networks and systems.</p>
+                            across networks and systems.</p>
                     </div>
-                    <div class="about-card">
+                    <div class="about-card" data-aos="zoom-in" data-aos-delay="200">
                         <h3>Threat Detection</h3>
                         <p>Passionate about detecting suspicious activity using tools like Wireshark, Nmap, and network
                             monitoring techniques.</p>
                     </div>
-                    <div class="about-card">
+                    <div class="about-card" data-aos="zoom-in" data-aos-delay="300">
                         <h3>Network & Infrastructure</h3>
                         <p>Comfortable working with switches, routers, firewalls, and lab simulators like Huawei eNSP
-                            and
-                            Packet Tracer.</p>
+                            and Packet Tracer.</p>
                     </div>
-                    <div class="about-card">
+                    <div class="about-card" data-aos="zoom-in" data-aos-delay="400">
                         <h3>Continuous Learning</h3>
                         <p>Always improving skills through labs, courses, and certifications in Cybersecurity and
                             Networking.</p>
@@ -128,11 +134,12 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
-        <h2 class="section-title">Skills</h2>
+    <!-- ✅ Skills Section (بطاقات المهارات) -->
+    <section id="skills" class="section skills-section" data-aos="fade-up">
+        <h2 class="section-title" data-aos="fade-up">Skills</h2>
         <div class="skills-grid">
-            <div class="skill-card">
+            <!-- كل بطاقة مهارة بتظهر بشكل مقلوب (flip) مع تأخير -->
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="100">
                 <div class="skill-icon">💻</div>
                 <h3>Programming</h3>
                 <ul>
@@ -143,7 +150,7 @@
                     <li>SQL</li>
                 </ul>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
                 <div class="skill-icon">🛡️</div>
                 <h3>Cybersecurity & Networking</h3>
                 <ul>
@@ -155,7 +162,7 @@
                     <li>Ethical Hacker Basics</li>
                 </ul>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
                 <div class="skill-icon">🔧</div>
                 <h3>Tools & Platforms</h3>
                 <ul>
@@ -165,7 +172,7 @@
                     <li>Microsoft Office</li>
                 </ul>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
                 <div class="skill-icon">🤝</div>
                 <h3>Soft Skills</h3>
                 <ul>
@@ -178,11 +185,12 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section experience-section">
-        <h2 class="section-title">Experience</h2>
+    <!-- ✅ Experience Section (بطاقات الخبرة) -->
+    <section id="experience" class="section experience-section" data-aos="fade-up">
+        <h2 class="section-title" data-aos="fade-up">Experience</h2>
         <div class="experience-timeline">
-            <div class="experience-card">
+            <!-- كل بطاقة خبرة بتظهر مكبرة (zoom) -->
+            <div class="experience-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="exp-header">
                     <h3 class="exp-role">Intern</h3>
                 </div>
@@ -194,7 +202,7 @@
                 </ul>
             </div>
 
-            <div class="experience-card">
+            <div class="experience-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="exp-header">
                     <h3 class="exp-role">Trainee</h3>
                 </div>
@@ -210,21 +218,20 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
-        <h2 class="section-title">Projects</h2>
+    <!-- ✅ Projects Section (بطاقات المشاريع) -->
+    <section id="projects" class="section projects-section" data-aos="fade-up">
+        <h2 class="section-title" data-aos="fade-up">Projects</h2>
         <div class="projects-grid">
-            <!-- Arduino RC Car -->
-            <div class="project-card">
+            <!-- كل مشروع بطاقة بتظهر مكبرة مع تأخير -->
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="project-image">
                     <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.21.22 PM.jpeg"
                         alt="Arduino RC Car">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Arduino RC Car</h3>
-                    <p class="project-description">
-                        Mobile-controlled car using Arduino & Bluetooth for remote movement and control.
-                    </p>
+                    <p class="project-description">Mobile-controlled car using Arduino & Bluetooth for remote movement
+                        and control.</p>
                     <div class="project-tags">
                         <span>Arduino</span>
                         <span>Bluetooth</span>
@@ -236,17 +243,15 @@
                 </div>
             </div>
 
-            <!-- Website Checker -->
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="project-image">
                     <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.24.12 PM.jpeg"
                         alt="Website Checker">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Website Checker</h3>
-                    <p class="project-description">
-                        Linux-based tool to monitor website uptime and basic availability status.
-                    </p>
+                    <p class="project-description">Linux-based tool to monitor website uptime and basic availability
+                        status.</p>
                     <div class="project-tags">
                         <span>Linux</span>
                         <span>Bash</span>
@@ -258,17 +263,15 @@
                 </div>
             </div>
 
-            <!-- Ping Test Tool -->
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
                 <div class="project-image">
                     <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.24.12 PM (2).jpeg"
                         alt="Ping Test Tool">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Ping Test Tool</h3>
-                    <p class="project-description">
-                        Automated script for testing network connectivity and latency to multiple targets.
-                    </p>
+                    <p class="project-description">Automated script for testing network connectivity and latency to
+                        multiple targets.</p>
                     <div class="project-tags">
                         <span>Networking</span>
                         <span>Ping</span>
@@ -280,17 +283,15 @@
                 </div>
             </div>
 
-            <!-- Automated Security Alert -->
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
                 <div class="project-image">
                     <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.24.11 PM (1).jpeg"
                         alt="Security Alert">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Automated Security Alert</h3>
-                    <p class="project-description">
-                        Real-time alert system that detects suspicious activity and notifies the user instantly.
-                    </p>
+                    <p class="project-description">Real-time alert system that detects suspicious activity and notifies
+                        the user instantly.</p>
                     <div class="project-tags">
                         <span>Security</span>
                         <span>Automation</span>
@@ -302,15 +303,13 @@
                 </div>
             </div>
 
-            <!-- Subway Game -->
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="500">
                 <div class="project-image">
                     <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.20.42 PM.jpeg" alt="Subway Game">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Subway Game</h3>
-                    <p class="project-description">
-                        2D graphics-based game with scoring, obstacles, and restart features.
+                    <p class="project-description">2D graphics-based game with scoring, obstacles, and restart features.
                     </p>
                     <div class="project-tags">
                         <span>Game Dev</span>
@@ -323,18 +322,15 @@
                 </div>
             </div>
 
-            <!-- Linux Server Hardening (New Project) -->
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="600">
                 <div class="project-image">
                     <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.20.42 PM (1).jpeg"
                         alt="Linux Server Hardening">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Linux Server Hardening</h3>
-                    <p class="project-description">
-                        Implemented security configurations on Linux servers including firewall rules, SSH hardening,
-                        user access controls, and system monitoring.
-                    </p>
+                    <p class="project-description">Implemented security configurations on Linux servers including
+                        firewall rules, SSH hardening, user access controls, and system monitoring.</p>
                     <div class="project-tags">
                         <span>Linux</span>
                         <span>Security</span>
@@ -350,83 +346,68 @@
         </div>
     </section>
 
-    <!-- Certificates Section -->
-    <!-- Certificates Section -->
-    <section id="certificates" class="section certificates-section">
-        <h2 class="section-title">Certificates</h2>
+    <!-- ✅ Certificates Section (بطاقات الشهادات) -->
+    <section id="certificates" class="section certificates-section" data-aos="fade-up">
+        <h2 class="section-title" data-aos="fade-up">Certificates</h2>
         <div class="certificates-grid">
-            <!-- Artificial Intelligence -->
+            <!-- بطاقات الشهادات بتظهر متأخرة -->
             <div class="certificate-item" data-cert-src="assets/certificates/AI.jpeg"
-                data-cert-title="Artificial Intelligence">
+                data-cert-title="Artificial Intelligence" data-aos="flip-left" data-aos-delay="100">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/AI.jpeg" alt="Artificial Intelligence Certificate">
                     <span class="certificate-zoom">+</span>
                 </div>
             </div>
-
-            <!-- Cyber Security & Networking -->
             <div class="certificate-item" data-cert-src="assets/certificates/security.jpeg"
-                data-cert-title="Cyber Security & Networking">
+                data-cert-title="Cyber Security & Networking" data-aos="flip-left" data-aos-delay="200">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/security.jpeg" alt="Cyber Security & Networking Certificate">
                     <span class="certificate-zoom">+</span>
                 </div>
             </div>
-
-            <!-- Technical Training -->
             <div class="certificate-item"
                 data-cert-src="assets/certificates/WhatsApp%20Image%202025-09-22%20at%204.31.05%20PM.jpeg"
-                data-cert-title="Technical Training">
+                data-cert-title="Technical Training" data-aos="flip-left" data-aos-delay="300">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/WhatsApp%20Image%202025-09-22%20at%204.31.05%20PM.jpeg"
                         alt="Technical Training Certificate">
                     <span class="certificate-zoom">+</span>
                 </div>
             </div>
-
-            <!-- IT Skills & Career Development -->
             <div class="certificate-item"
                 data-cert-src="assets/certificates/WhatsApp%20Image%202025-11-10%20at%2012.08.49%20PM.jpeg"
-                data-cert-title="IT Skills & Career Development">
+                data-cert-title="IT Skills & Career Development" data-aos="flip-left" data-aos-delay="400">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/WhatsApp%20Image%202025-11-10%20at%2012.08.49%20PM.jpeg"
                         alt="IT Skills & Career Development">
                     <span class="certificate-zoom">+</span>
                 </div>
             </div>
-
-            <!-- Cybersecurity / Networking -->
             <div class="certificate-item" data-cert-src="assets/certificates/شهادتي.jpeg"
-                data-cert-title="Cybersecurity / Networking">
+                data-cert-title="Cybersecurity / Networking" data-aos="flip-left" data-aos-delay="500">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/شهادتي.jpeg" alt="Cybersecurity / Networking Certificate">
                     <span class="certificate-zoom">+</span>
                 </div>
             </div>
-
-            <!-- Digital Marketing - Banque Misr & Google -->
             <div class="certificate-item"
                 data-cert-src="assets/certificates/شهاده%20بنك%20مصر%20و%20مهارات%20من%20جوجل.jpeg"
-                data-cert-title="Digital Marketing - Banque Misr & Google">
+                data-cert-title="Digital Marketing - Banque Misr & Google" data-aos="flip-left" data-aos-delay="600">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/شهاده%20بنك%20مصر%20و%20مهارات%20من%20جوجل.jpeg"
                         alt="Fundamentals of Digital Marketing - Banque Misr & Google">
                     <span class="certificate-zoom">+</span>
                 </div>
             </div>
-
-            <!-- Technical / Training -->
             <div class="certificate-item" data-cert-src="assets/certificates/مختار%20ابارهيم.jpg"
-                data-cert-title="Technical / Training">
+                data-cert-title="Technical / Training" data-aos="flip-left" data-aos-delay="700">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/مختار%20ابارهيم.jpg" alt="Technical / Training Certificate">
                     <span class="certificate-zoom">+</span>
                 </div>
             </div>
-
-            <!-- British Certificate (الجديدة) -->
             <div class="certificate-item" data-cert-src="assets/certificates/britich.jpeg"
-                data-cert-title="British Certificate">
+                data-cert-title="British Certificate" data-aos="flip-left" data-aos-delay="800">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/britich.jpeg" alt="British Certificate">
                     <span class="certificate-zoom">+</span>
@@ -435,7 +416,7 @@
         </div>
     </section>
 
-    <!-- Certificate Modal (lightbox) -->
+    <!-- Certificate Modal (lightbox) - مش محتاج تأثير لأنها بتظهر فوق الكل -->
     <div class="certificate-modal" id="certificateModal" aria-hidden="true">
         <div class="certificate-modal-backdrop"></div>
         <div class="certificate-modal-box">
@@ -446,43 +427,36 @@
         </div>
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <h2 class="section-title">Contact Me</h2>
+    <!-- ✅ Contact Section -->
+    <section id="contact" class="section contact-section" data-aos="fade-up">
+        <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
         <div class="contact-layout">
+            <!-- بطاقات التواصل -->
             <div class="contact-info-column">
-                <div class="contact-card">
+                <div class="contact-card" data-aos="fade-right" data-aos-delay="100">
                     <span class="contact-icon">✉️</span>
                     <span class="contact-label">Email</span>
-                    <a href="mailto:moemen.mohamed.it@gmail.com" class="contact-value">
-                        moemen.mohamed.it@gmail.com
-                    </a>
+                    <a href="mailto:moemen.mohamed.it@gmail.com" class="contact-value">moemen.mohamed.it@gmail.com</a>
                 </div>
-                <div class="contact-card">
+                <div class="contact-card" data-aos="fade-right" data-aos-delay="200">
                     <span class="contact-icon">📞</span>
                     <span class="contact-label">Phone</span>
-                    <a href="tel:01500022148" class="contact-value">
-                        01500022148
-                    </a>
+                    <a href="tel:01500022148" class="contact-value">01500022148</a>
                 </div>
-                <div class="contact-card">
+                <div class="contact-card" data-aos="fade-right" data-aos-delay="300">
                     <span class="contact-icon">💼</span>
                     <span class="contact-label">LinkedIn</span>
                     <a href="https://www.linkedin.com/in/moemen-shendia" target="_blank" rel="noopener"
-                        class="contact-value">
-                        linkedin.com/in/moemen-shendia
-                    </a>
+                        class="contact-value">linkedin.com/in/moemen-shendia</a>
                 </div>
             </div>
-
-            <div class="contact-form-column">
+            <!-- فورم التواصل -->
+            <div class="contact-form-column" data-aos="fade-left" data-aos-delay="200">
                 <form class="contact-form" action="https://formsubmit.co/moemen.mohamed.it@gmail.com" method="POST">
-                    <!-- حقول Hidden مهمة -->
                     <input type="hidden" name="_subject" value="New message from Portfolio!">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_template" value="box">
                     <input type="hidden" name="_next" value="https://moemenshendia0-tech.github.io/portofolio/">
-
                     <div class="form-row">
                         <div class="form-field">
                             <label for="name">Name</label>
@@ -509,10 +483,8 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h3>Moemen Mohamed</h3>
-                <p class="footer-text">
-                    Cybersecurity &amp; Networking student passionate about building secure systems, solving complex
-                    problems, and growing in the field of Information Security.
-                </p>
+                <p class="footer-text">Cybersecurity &amp; Networking student passionate about building secure systems,
+                    solving complex problems, and growing in the field of Information Security.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -537,6 +509,39 @@
         <p class="footer-bottom">© <span id="year"></span> Moemen Mohamed. All rights reserved.</p>
     </footer>
 
+    <!-- ✅ هنا شغّلنا المكتبات -->
+    <!-- ✅ مكتبة AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ✅ مكتبة Typed.js للكتابة -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- ✅ سكريبت التشغيل -->
+    <script>
+        // تفعيل AOS
+        AOS.init({
+            duration: 800,      // المدة
+            once: true,         // يشتغل مرة واحدة بس
+            offset: 100,        // يبدأ الحركة بعد 100 بكسل من التمرير
+        });
+
+        // تفعيل Typed.js على الـ home-title
+        new Typed('.home-title', {
+            strings: [
+                'Cybersecurity Student',
+                'Networking Engineer',
+                'Security Analyst',
+                'Ethical Hacker'
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    </script>
+
+    <!-- ملف الـ JavaScript بتاعك القديم (لو فيه حاجات تانية) -->
     <script src="script.js"></script>
 </body>
 
