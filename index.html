@@ -15,7 +15,23 @@
 </head>
 
 <body>
-
+    
+<!-- خلفية متحركة -->
+<div class="animated-background">
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+    <div class="bg-circle circle-3"></div>
+    <div class="bg-circle circle-4"></div>
+    
+    <div class="bg-dot dot-1"></div>
+    <div class="bg-dot dot-2"></div>
+    <div class="bg-dot dot-3"></div>
+    <div class="bg-dot dot-4"></div>
+    <div class="bg-dot dot-5"></div>
+    <div class="bg-dot dot-6"></div>
+    <div class="bg-dot dot-7"></div>
+    <div class="bg-dot dot-8"></div>
+</div>
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -346,87 +362,91 @@
         </div>
     </section>
 
-    <!-- ✅ Certificates Section (بطاقات الشهادات) -->
+    <!-- ✅ Certificates Section - من غير كلام تحت -->
     <section id="certificates" class="section certificates-section" data-aos="fade-up">
         <h2 class="section-title" data-aos="fade-up">Certificates</h2>
         <div class="certificates-grid">
-            <!-- بطاقات الشهادات بتظهر متأخرة -->
+            <!-- Artificial Intelligence -->
             <div class="certificate-item" data-cert-src="assets/certificates/AI.jpeg"
                 data-cert-title="Artificial Intelligence" data-aos="flip-left" data-aos-delay="100">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/AI.jpeg" alt="Artificial Intelligence Certificate">
-                    <span class="certificate-zoom">+</span>
                 </div>
             </div>
+
+            <!-- Cyber Security & Networking -->
             <div class="certificate-item" data-cert-src="assets/certificates/security.jpeg"
                 data-cert-title="Cyber Security & Networking" data-aos="flip-left" data-aos-delay="200">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/security.jpeg" alt="Cyber Security & Networking Certificate">
-                    <span class="certificate-zoom">+</span>
                 </div>
             </div>
+
+            <!-- Technical Training 1 -->
             <div class="certificate-item"
                 data-cert-src="assets/certificates/WhatsApp%20Image%202025-09-22%20at%204.31.05%20PM.jpeg"
                 data-cert-title="Technical Training" data-aos="flip-left" data-aos-delay="300">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/WhatsApp%20Image%202025-09-22%20at%204.31.05%20PM.jpeg"
                         alt="Technical Training Certificate">
-                    <span class="certificate-zoom">+</span>
                 </div>
             </div>
+
+            <!-- IT Skills & Career Development -->
             <div class="certificate-item"
                 data-cert-src="assets/certificates/WhatsApp%20Image%202025-11-10%20at%2012.08.49%20PM.jpeg"
                 data-cert-title="IT Skills & Career Development" data-aos="flip-left" data-aos-delay="400">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/WhatsApp%20Image%202025-11-10%20at%2012.08.49%20PM.jpeg"
                         alt="IT Skills & Career Development">
-                    <span class="certificate-zoom">+</span>
                 </div>
             </div>
+
+            <!-- Cybersecurity / Networking -->
             <div class="certificate-item" data-cert-src="assets/certificates/شهادتي.jpeg"
                 data-cert-title="Cybersecurity / Networking" data-aos="flip-left" data-aos-delay="500">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/شهادتي.jpeg" alt="Cybersecurity / Networking Certificate">
-                    <span class="certificate-zoom">+</span>
                 </div>
             </div>
+
+            <!-- Digital Marketing - Banque Misr & Google -->
             <div class="certificate-item"
                 data-cert-src="assets/certificates/شهاده%20بنك%20مصر%20و%20مهارات%20من%20جوجل.jpeg"
-                data-cert-title="Digital Marketing - Banque Misr & Google" data-aos="flip-left" data-aos-delay="600">
+                data-cert-title="Digital Marketing" data-aos="flip-left" data-aos-delay="600">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/شهاده%20بنك%20مصر%20و%20مهارات%20من%20جوجل.jpeg"
-                        alt="Fundamentals of Digital Marketing - Banque Misr & Google">
-                    <span class="certificate-zoom">+</span>
+                        alt="Digital Marketing Certificate">
                 </div>
             </div>
+
+            <!-- Technical / Training 2 -->
             <div class="certificate-item" data-cert-src="assets/certificates/مختار%20ابارهيم.jpg"
-                data-cert-title="Technical / Training" data-aos="flip-left" data-aos-delay="700">
+                data-cert-title="Technical Training" data-aos="flip-left" data-aos-delay="700">
                 <div class="certificate-image-wrap">
-                    <img src="assets/certificates/مختار%20ابارهيم.jpg" alt="Technical / Training Certificate">
-                    <span class="certificate-zoom">+</span>
+                    <img src="assets/certificates/مختار%20ابارهيم.jpg" alt="Technical Training Certificate">
                 </div>
             </div>
+
+            <!-- British Certificate -->
             <div class="certificate-item" data-cert-src="assets/certificates/britich.jpeg"
                 data-cert-title="British Certificate" data-aos="flip-left" data-aos-delay="800">
                 <div class="certificate-image-wrap">
                     <img src="assets/certificates/britich.jpeg" alt="British Certificate">
-                    <span class="certificate-zoom">+</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certificate Modal (lightbox) - مش محتاج تأثير لأنها بتظهر فوق الكل -->
+    <!-- Certificate Modal (lightbox) -->
     <div class="certificate-modal" id="certificateModal" aria-hidden="true">
         <div class="certificate-modal-backdrop"></div>
         <div class="certificate-modal-box">
             <button type="button" class="certificate-modal-close" id="certificateModalClose"
                 aria-label="Close">&times;</button>
             <img class="certificate-modal-img" id="certificateModalImg" src="" alt="">
-            <p class="certificate-modal-title" id="certificateModalTitle"></p>
         </div>
     </div>
-
     <!-- ✅ Contact Section -->
     <section id="contact" class="section contact-section" data-aos="fade-up">
         <h2 class="section-title" data-aos="fade-up">Contact Me</h2>
