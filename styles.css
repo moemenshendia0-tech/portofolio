@@ -2273,333 +2273,456 @@
  .glow-particles {
      pointer-events: none !important;
  }
+
  /* ===== Certificates Section - Original Design ===== */
 
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
+ .certificates-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+     padding: 2rem 0;
+ }
 
-.certificate-item {
-    background: var(--bg-card);
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid var(--border-subtle);
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+ .certificate-item {
+     background: var(--bg-card);
+     border-radius: 12px;
+     box-shadow: var(--card-shadow);
+     border: 1px solid var(--border-subtle);
+     padding: 1rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1rem;
+     transition: all 0.3s ease;
+     cursor: pointer;
+ }
 
-.certificate-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 30px rgba(64, 81, 59, 0.25);
-}
+ .certificate-item:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 20px 30px rgba(64, 81, 59, 0.25);
+ }
 
-.certificate-image-wrap {
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    aspect-ratio: 4/3;
-}
+ .certificate-image-wrap {
+     width: 100%;
+     border-radius: 8px;
+     overflow: hidden;
+     aspect-ratio: 4/3;
+ }
 
-.certificate-image-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
+ .certificate-image-wrap img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     display: block;
+     transition: transform 0.3s ease;
+ }
 
-.certificate-item:hover .certificate-image-wrap img {
-    transform: scale(1.05);
-}
+ .certificate-item:hover .certificate-image-wrap img {
+     transform: scale(1.05);
+ }
 
-.certificate-item p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    text-align: center;
-    font-weight: 500;
-}
+ .certificate-item p {
+     font-size: 0.95rem;
+     color: var(--text-secondary);
+     text-align: center;
+     font-weight: 500;
+ }
 
-/* Dark mode adjustments */
-body.dark-mode .certificate-item {
-    background: #2a3a2a;
-    border-color: rgba(164, 190, 123, 0.2);
-}
+ /* Dark mode adjustments */
+ body.dark-mode .certificate-item {
+     background: #2a3a2a;
+     border-color: rgba(164, 190, 123, 0.2);
+ }
 
-body.dark-mode .certificate-item p {
-    color: #EDF1D6;
-}
-/* ===== Certificates Section - بدون نص تحت ===== */
+ body.dark-mode .certificate-item p {
+     color: #EDF1D6;
+ }
 
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
+ /* ===== Certificates Section - بدون نص تحت ===== */
 
-.certificate-item {
-    background: var(--bg-card);
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid var(--border-subtle);
-    padding: 1rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+ .certificates-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+     padding: 2rem 0;
+ }
 
-.certificate-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 30px rgba(64, 81, 59, 0.25);
-}
+ .certificate-item {
+     background: var(--bg-card);
+     border-radius: 12px;
+     box-shadow: var(--card-shadow);
+     border: 1px solid var(--border-subtle);
+     padding: 1rem;
+     transition: all 0.3s ease;
+     cursor: pointer;
+ }
 
-.certificate-image-wrap {
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    aspect-ratio: 4/3;
-}
+ .certificate-item:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 20px 30px rgba(64, 81, 59, 0.25);
+ }
 
-.certificate-image-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
+ .certificate-image-wrap {
+     width: 100%;
+     border-radius: 8px;
+     overflow: hidden;
+     aspect-ratio: 4/3;
+ }
 
-.certificate-item:hover .certificate-image-wrap img {
-    transform: scale(1.05);
-}
+ .certificate-image-wrap img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     display: block;
+     transition: transform 0.3s ease;
+ }
 
-/* إزالة أي نص كان موجود */
-.certificate-item p {
-    display: none;
-}
+ .certificate-item:hover .certificate-image-wrap img {
+     transform: scale(1.05);
+ }
 
-/* Dark mode adjustments */
-body.dark-mode .certificate-item {
-    background: #2a3a2a;
-    border-color: rgba(164, 190, 123, 0.2);
-}
-/* ===== شبكة الجزيئات المتحركة - زي موقع صديقك ===== */
+ /* إزالة أي نص كان موجود */
+ .certificate-item p {
+     display: none;
+ }
 
-.particles-network {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-    overflow: hidden;
-}
+ /* Dark mode adjustments */
+ body.dark-mode .certificate-item {
+     background: #2a3a2a;
+     border-color: rgba(164, 190, 123, 0.2);
+ }
 
-/* الحاوية الرئيسية للجزيئات */
-.particles-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
+ /* ===== شبكة الجزيئات المتحركة - زي موقع صديقك ===== */
 
-/* كل جزيء على حدة */
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--highlight);
-    border-radius: 50%;
-    opacity: 0.2;
-    box-shadow: 0 0 10px var(--highlight-light);
-    animation: particleFloat 15s infinite ease-in-out;
-}
+ .particles-network {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 0;
+     pointer-events: none;
+     overflow: hidden;
+ }
 
-/* توزيع الجزيئات في أماكن مختلفة */
-.particle-1 { top: 15%; left: 10%; animation-duration: 14s; }
-.particle-2 { top: 25%; left: 80%; animation-duration: 16s; animation-delay: -2s; }
-.particle-3 { top: 45%; left: 30%; animation-duration: 18s; animation-delay: -4s; }
-.particle-4 { top: 60%; left: 70%; animation-duration: 15s; animation-delay: -1s; }
-.particle-5 { top: 75%; left: 40%; animation-duration: 17s; animation-delay: -5s; }
-.particle-6 { top: 85%; left: 85%; animation-duration: 19s; animation-delay: -7s; }
-.particle-7 { top: 35%; left: 50%; animation-duration: 16s; animation-delay: -3s; }
-.particle-8 { top: 50%; left: 15%; animation-duration: 18s; animation-delay: -6s; }
-.particle-9 { top: 70%; left: 20%; animation-duration: 15s; animation-delay: -2.5s; }
-.particle-10 { top: 20%; left: 60%; animation-duration: 17s; animation-delay: -4.5s; }
-.particle-11 { top: 90%; left: 45%; animation-duration: 19s; animation-delay: -8s; }
-.particle-12 { top: 40%; left: 90%; animation-duration: 16s; animation-delay: -1.5s; }
-.particle-13 { top: 55%; left: 55%; animation-duration: 18s; animation-delay: -5.5s; }
-.particle-14 { top: 10%; left: 35%; animation-duration: 17s; animation-delay: -3.5s; }
-.particle-15 { top: 80%; left: 5%; animation-duration: 19s; animation-delay: -6.5s; }
-.particle-16 { top: 30%; left: 75%; animation-duration: 15s; animation-delay: -0.5s; }
+ /* الحاوية الرئيسية للجزيئات */
+ .particles-container {
+     position: relative;
+     width: 100%;
+     height: 100%;
+ }
 
-/* الخطوط الواصلة بين الجزيئات */
-.particle-line {
-    position: absolute;
-    background: linear-gradient(90deg, 
-        var(--highlight-light), 
-        transparent);
-    height: 1px;
-    transform-origin: left center;
-    opacity: 0.1;
-    animation: lineFade 8s infinite;
-}
+ /* كل جزيء على حدة */
+ .particle {
+     position: absolute;
+     width: 4px;
+     height: 4px;
+     background: var(--highlight);
+     border-radius: 50%;
+     opacity: 0.2;
+     box-shadow: 0 0 10px var(--highlight-light);
+     animation: particleFloat 15s infinite ease-in-out;
+ }
 
-/* حركة الجزيئات */
-@keyframes particleFloat {
-    0%, 100% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.2;
-    }
-    25% {
-        transform: translate(20px, -15px) scale(1.3);
-        opacity: 0.4;
-    }
-    50% {
-        transform: translate(-15px, 20px) scale(0.8);
-        opacity: 0.2;
-    }
-    75% {
-        transform: translate(-20px, -10px) scale(1.2);
-        opacity: 0.3;
-    }
-}
+ /* توزيع الجزيئات في أماكن مختلفة */
+ .particle-1 {
+     top: 15%;
+     left: 10%;
+     animation-duration: 14s;
+ }
 
-/* حركة الخطوط */
-@keyframes lineFade {
-    0%, 100% { opacity: 0.05; }
-    50% { opacity: 0.15; }
-}
+ .particle-2 {
+     top: 25%;
+     left: 80%;
+     animation-duration: 16s;
+     animation-delay: -2s;
+ }
 
-/* ===== تفعيل الأنيميشن بالـ JS ===== */
-.canvas-particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-}
+ .particle-3 {
+     top: 45%;
+     left: 30%;
+     animation-duration: 18s;
+     animation-delay: -4s;
+ }
 
-/* تعديل ألوان الدارك مود */
-body.dark-mode .particle {
-    background: var(--highlight-light);
-    opacity: 0.3;
-    box-shadow: 0 0 15px var(--highlight);
-}
+ .particle-4 {
+     top: 60%;
+     left: 70%;
+     animation-duration: 15s;
+     animation-delay: -1s;
+ }
 
-body.dark-mode .particle-line {
-    background: linear-gradient(90deg, 
-        var(--highlight), 
-        transparent);
-    opacity: 0.15;
-}
+ .particle-5 {
+     top: 75%;
+     left: 40%;
+     animation-duration: 17s;
+     animation-delay: -5s;
+ }
 
-/* تقليل الحركة للموبايل */
-@media (max-width: 768px) {
-    .particle {
-        opacity: 0.1;
-    }
-    .particle-line {
-        opacity: 0.05;
-    }
-}
+ .particle-6 {
+     top: 85%;
+     left: 85%;
+     animation-duration: 19s;
+     animation-delay: -7s;
+ }
 
-@media (prefers-reduced-motion: reduce) {
-    .particle, .particle-line {
-        animation: none;
-    }
-}
-/* ===== جزيئات الخلفية - محسنة لـ Light Mode ===== */
+ .particle-7 {
+     top: 35%;
+     left: 50%;
+     animation-duration: 16s;
+     animation-delay: -3s;
+ }
 
-/*Canvas particles - لو بتستخدم الطريقة المتقدمة */
-.canvas-particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-}
+ .particle-8 {
+     top: 50%;
+     left: 15%;
+     animation-duration: 18s;
+     animation-delay: -6s;
+ }
 
-/* تحسين لون الجزيئات في Light Mode */
-body:not(.dark-mode) .canvas-particles canvas {
-    filter: brightness(1.2) contrast(1.1);
-}
+ .particle-9 {
+     top: 70%;
+     left: 20%;
+     animation-duration: 15s;
+     animation-delay: -2.5s;
+ }
 
-/* لو بتستخدم الـ CSS particles (الطريقة الأولى) */
-body:not(.dark-mode) .particle {
-    background: #609966 !important; /* لون أخضر غامق للجزيئات */
-    opacity: 0.4 !important; /* زيادة الظهور */
-    box-shadow: 0 0 15px #A4BE7B !important; /* إضاءة خلفية */
-}
+ .particle-10 {
+     top: 20%;
+     left: 60%;
+     animation-duration: 17s;
+     animation-delay: -4.5s;
+ }
 
-body:not(.dark-mode) .particle-line {
-    background: linear-gradient(90deg, 
-        #40513B, 
-        transparent) !important;
-    opacity: 0.25 !important; /* الخطوط أوضح */
-}
+ .particle-11 {
+     top: 90%;
+     left: 45%;
+     animation-duration: 19s;
+     animation-delay: -8s;
+ }
 
-body:not(.dark-mode) .particle:nth-child(odd) {
-    background: #40513B !important;
-    opacity: 0.5 !important;
-}
+ .particle-12 {
+     top: 40%;
+     left: 90%;
+     animation-duration: 16s;
+     animation-delay: -1.5s;
+ }
 
-body:not(.dark-mode) .particle:nth-child(even) {
-    background: #9DC08B !important;
-    opacity: 0.45 !important;
-}
+ .particle-13 {
+     top: 55%;
+     left: 55%;
+     animation-duration: 18s;
+     animation-delay: -5.5s;
+ }
 
-/* إضافة جزيئات إضافية للـ Light Mode */
-body:not(.dark-mode) .particles-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 30% 40%, 
-        rgba(96, 153, 102, 0.1) 0%,
-        transparent 50%);
-    pointer-events: none;
-}
-/* ===== جزيئات الخلفية - إضاءة مخفضة لـ Light Mode ===== */
+ .particle-14 {
+     top: 10%;
+     left: 35%;
+     animation-duration: 17s;
+     animation-delay: -3.5s;
+ }
 
-/* تقليل إضاءة الجزيئات في Light Mode */
-body:not(.dark-mode) .particle {
-    background: #40513B !important; /* لون غامق بدون إضاءة */
-    opacity: 0.15 !important; /* تقليل الشفافية (كانت 0.4) */
-    box-shadow: none !important; /* إزالة الإضاءة الخلفية تماماً */
-}
+ .particle-15 {
+     top: 80%;
+     left: 5%;
+     animation-duration: 19s;
+     animation-delay: -6.5s;
+ }
 
-body:not(.dark-mode) .particle:nth-child(odd) {
-    background: #40513B !important;
-    opacity: 0.12 !important;
-}
+ .particle-16 {
+     top: 30%;
+     left: 75%;
+     animation-duration: 15s;
+     animation-delay: -0.5s;
+ }
 
-body:not(.dark-mode) .particle:nth-child(even) {
-    background: #609966 !important;
-    opacity: 0.1 !important;
-}
+ /* الخطوط الواصلة بين الجزيئات */
+ .particle-line {
+     position: absolute;
+     background: linear-gradient(90deg,
+             var(--highlight-light),
+             transparent);
+     height: 1px;
+     transform-origin: left center;
+     opacity: 0.1;
+     animation: lineFade 8s infinite;
+ }
 
-/* تقليل وضوح الخطوط */
-body:not(.dark-mode) .particle-line {
-    background: linear-gradient(90deg, 
-        #40513B, 
-        transparent) !important;
-    opacity: 0.08 !important; /* تقليل وضوح الخطوط (كانت 0.25) */
-}
+ /* حركة الجزيئات */
+ @keyframes particleFloat {
 
-/* إزالة أي إضاءة إضافية */
-body:not(.dark-mode) .particles-container::after {
-    display: none !important; /* إزالة الـ gradient الزائد */
-}
+     0%,
+     100% {
+         transform: translate(0, 0) scale(1);
+         opacity: 0.2;
+     }
+
+     25% {
+         transform: translate(20px, -15px) scale(1.3);
+         opacity: 0.4;
+     }
+
+     50% {
+         transform: translate(-15px, 20px) scale(0.8);
+         opacity: 0.2;
+     }
+
+     75% {
+         transform: translate(-20px, -10px) scale(1.2);
+         opacity: 0.3;
+     }
+ }
+
+ /* حركة الخطوط */
+ @keyframes lineFade {
+
+     0%,
+     100% {
+         opacity: 0.05;
+     }
+
+     50% {
+         opacity: 0.15;
+     }
+ }
+
+ /* ===== تفعيل الأنيميشن بالـ JS ===== */
+ .canvas-particles {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 0;
+     pointer-events: none;
+ }
+
+ /* تعديل ألوان الدارك مود */
+ body.dark-mode .particle {
+     background: var(--highlight-light);
+     opacity: 0.3;
+     box-shadow: 0 0 15px var(--highlight);
+ }
+
+ body.dark-mode .particle-line {
+     background: linear-gradient(90deg,
+             var(--highlight),
+             transparent);
+     opacity: 0.15;
+ }
+
+ /* تقليل الحركة للموبايل */
+ @media (max-width: 768px) {
+     .particle {
+         opacity: 0.1;
+     }
+
+     .particle-line {
+         opacity: 0.05;
+     }
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+
+     .particle,
+     .particle-line {
+         animation: none;
+     }
+ }
+
+ /* ===== جزيئات الخلفية - محسنة لـ Light Mode ===== */
+
+ /*Canvas particles - لو بتستخدم الطريقة المتقدمة */
+ .canvas-particles {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 0;
+     pointer-events: none;
+ }
+
+ /* تحسين لون الجزيئات في Light Mode */
+ body:not(.dark-mode) .canvas-particles canvas {
+     filter: brightness(1.2) contrast(1.1);
+ }
+
+ /* لو بتستخدم الـ CSS particles (الطريقة الأولى) */
+ body:not(.dark-mode) .particle {
+     background: #609966 !important;
+     /* لون أخضر غامق للجزيئات */
+     opacity: 0.4 !important;
+     /* زيادة الظهور */
+     box-shadow: 0 0 15px #A4BE7B !important;
+     /* إضاءة خلفية */
+ }
+
+ body:not(.dark-mode) .particle-line {
+     background: linear-gradient(90deg,
+             #40513B,
+             transparent) !important;
+     opacity: 0.25 !important;
+     /* الخطوط أوضح */
+ }
+
+ body:not(.dark-mode) .particle:nth-child(odd) {
+     background: #40513B !important;
+     opacity: 0.5 !important;
+ }
+
+ body:not(.dark-mode) .particle:nth-child(even) {
+     background: #9DC08B !important;
+     opacity: 0.45 !important;
+ }
+
+ /* إضافة جزيئات إضافية للـ Light Mode */
+ body:not(.dark-mode) .particles-container::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: radial-gradient(circle at 30% 40%,
+             rgba(96, 153, 102, 0.1) 0%,
+             transparent 50%);
+     pointer-events: none;
+ }
+
+ /* ===== جزيئات الخلفية - إضاءة مخفضة لـ Light Mode ===== */
+
+ /* تقليل إضاءة الجزيئات في Light Mode */
+ body:not(.dark-mode) .particle {
+     background: #40513B !important;
+     /* لون غامق بدون إضاءة */
+     opacity: 0.15 !important;
+     /* تقليل الشفافية (كانت 0.4) */
+     box-shadow: none !important;
+     /* إزالة الإضاءة الخلفية تماماً */
+ }
+
+ body:not(.dark-mode) .particle:nth-child(odd) {
+     background: #40513B !important;
+     opacity: 0.12 !important;
+ }
+
+ body:not(.dark-mode) .particle:nth-child(even) {
+     background: #609966 !important;
+     opacity: 0.1 !important;
+ }
+
+ /* تقليل وضوح الخطوط */
+ body:not(.dark-mode) .particle-line {
+     background: linear-gradient(90deg,
+             #40513B,
+             transparent) !important;
+     opacity: 0.08 !important;
+     /* تقليل وضوح الخطوط (كانت 0.25) */
+ }
+
+ /* إزالة أي إضاءة إضافية */
+ body:not(.dark-mode) .particles-container::after {
+     display: none !important;
+     /* إزالة الـ gradient الزائد */
+ }

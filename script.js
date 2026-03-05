@@ -181,21 +181,21 @@ function initParticles() {
     const canvas = document.createElement('canvas');
     canvas.className = 'canvas-particles';
     document.body.prepend(canvas);
-    
+
     const ctx = canvas.getContext('2d');
     let width, height;
     let particles = [];
-    
+
     const PARTICLE_COUNT = 50;
     const CONNECTION_DISTANCE = 150;
-    
+
     function resize() {
         width = window.innerWidth;
         height = window.innerHeight;
         canvas.width = width;
         canvas.height = height;
     }
-    
+
     function createParticles() {
         particles = [];
         for (let i = 0; i < PARTICLE_COUNT; i++) {
@@ -208,35 +208,35 @@ function initParticles() {
             });
         }
     }
-    
+
     function updateParticles() {
         particles.forEach(p => {
             p.x += p.vx;
             p.y += p.vy;
-            
+
             // الحدود
             if (p.x < 0 || p.x > width) p.vx *= -1;
             if (p.y < 0 || p.y > height) p.vy *= -1;
-            
+
             // تصحيح الموضع
             p.x = Math.max(0, Math.min(width, p.x));
             p.y = Math.max(0, Math.min(height, p.y));
         });
     }
-    
+
     function drawParticles() {
         ctx.clearRect(0, 0, width, height);
-        
+
         // رسم الخطوط بين الجزيئات القريبة
         ctx.strokeStyle = getComputedStyle(document.body).getPropertyValue('--highlight').trim() || '#C0FF4E';
         ctx.lineWidth = 0.5;
-        
+
         particles.forEach((p1, i) => {
             particles.slice(i + 1).forEach(p2 => {
                 const dx = p1.x - p2.x;
                 const dy = p1.y - p2.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-                
+
                 if (distance < CONNECTION_DISTANCE) {
                     const opacity = (1 - distance / CONNECTION_DISTANCE) * 0.3;
                     ctx.beginPath();
@@ -247,7 +247,7 @@ function initParticles() {
                 }
             });
         });
-        
+
         // رسم الجزيئات
         particles.forEach(p => {
             ctx.beginPath();
@@ -257,21 +257,21 @@ function initParticles() {
             ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
             ctx.fill();
         });
-        
+
         ctx.shadowBlur = 0;
     }
-    
+
     function animate() {
         updateParticles();
         drawParticles();
         requestAnimationFrame(animate);
     }
-    
+
     window.addEventListener('resize', () => {
         resize();
         createParticles();
     });
-    
+
     resize();
     createParticles();
     animate();
