@@ -15,12 +15,6 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">Moemen</a>
-            <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu"
-                aria-expanded="false" aria-controls="navMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -29,14 +23,20 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button type="button" class="theme-toggle" id="themeToggle"
-                        aria-label="Toggle dark/light mode">
-                        <span class="icon-sun">☀️</span>
-                        <span class="icon-moon">🌙</span>
-                    </button>
-                </li>
             </ul>
+            <div class="nav-end">
+                <button type="button" class="theme-toggle" id="themeToggle"
+                    aria-label="Toggle dark/light mode">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+                <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle menu"
+                    aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -65,11 +65,12 @@
             <div class="home-text">
                 <p class="home-greeting">Hi, I am</p>
                 <h1 class="home-name">Moemen Mohamed</h1>
-                <p class="home-title">Cybersecurity & Networking Student</p>
+                <p class="home-title">Entry-level SOC Analyst | Cybersecurity &amp; Networking Student</p>
                 <p class="home-bio">
-                    I'm a Computer Science student with hands-on experience and strong passion in
-                    <span class="highlight">Cyber Security</span> and Network Engineering, always learning and building
-                    real-world projects.
+                    Computer Science student at MUST with hands-on IT support experience and practical
+                    cybersecurity training. I build Python and Bash tools for log parsing, alerting, and
+                    network monitoring that mirror core <span class="highlight">SOC</span> workflows, and I work
+                    with SIEM and security tools including Splunk, QRadar, Wireshark, Nmap, Metasploit, and Burp Suite.
                 </p>
                 <div class="home-buttons">
                     <a href="assets/CV.pdf" class="btn btn-primary" id="downloadCV" target="_blank" rel="noopener">
@@ -86,7 +87,7 @@
             </div>
             <div class="home-image-wrapper">
                 <div class="home-image-placeholder">
-                    <img src="assets/images/%D9%84%D9%8A%D9%86%D9%83%D8%AF%D8%A7%D9%86%20(2).png" alt="Moemen Mohamed">
+                    <img src="assets/images/profile-hero.png" alt="Moemen Mohamed, entry-level SOC analyst and cybersecurity student">
                 </div>
             </div>
         </div>
@@ -165,6 +166,12 @@
                 <h3>Cybersecurity & Networking</h3>
                 <ul>
                     <li>Kali Linux (Wireshark, Nmap, Packet Tracer)</li>
+                    <li>SIEM (Splunk, IBM QRadar)</li>
+                    <li>Metasploit</li>
+                    <li>Burp Suite</li>
+                    <li>IDS/IPS</li>
+                    <li>VPN</li>
+                    <li>Firewall Configuration</li>
                     <li>Linux OS</li>
                     <li>Huawei eNSP</li>
                     <li>Network Fundamentals</li>
@@ -176,9 +183,9 @@
                 <div class="skill-icon">🔧</div>
                 <h3>Tools & Platforms</h3>
                 <ul>
-                    <li>Git</li>
-                    <li>Virtual Machines</li>
-                    <li>Command Line</li>
+                    <li>Git &amp; GitHub</li>
+                    <li>Virtual Machines (VirtualBox, VMware)</li>
+                    <li>Command Line / Bash</li>
                     <li>Microsoft Office</li>
                 </ul>
             </div>
@@ -202,27 +209,34 @@
             
             <div class="experience-card">
                 <div class="exp-header">
-                    <h3 class="exp-role">Intern</h3>
+                    <h3 class="exp-role">Summer IT &amp; Telecommunications Trainee</h3>
+                    <span class="exp-year">July 26 – August 6, 2026</span>
                 </div>
-                <p class="exp-company">Egyptian Contracting Company - Dokki, Egypt</p>
+                <p class="exp-company">GUPCO – Gulf of Suez Petroleum Company | Maadi, Egypt</p>
                 <ul class="exp-list">
-                    <li>Assisted in hardware maintenance and troubleshooting, reducing downtime.</li>
-                    <li>Supported database management, ensuring data consistency and integrity.</li>
-                    <li>Provided IT support and resolved technical issues.</li>
+                    <li>Completed an intensive summer training program in the Information Technology &amp;
+                        Telecommunications Department, gaining exposure to enterprise networking, telecom systems, and
+                        IT operations.</li>
+                    <li>Took part in cross-functional sessions covering cybersecurity, AI fundamentals, and soft
+                        skills.</li>
+                    <li>Joined a guided tour of server rooms and data center operations.</li>
+                    <li>Delivered a team presentation as part of the program.</li>
                 </ul>
             </div>
 
             <div class="experience-card">
                 <div class="exp-header">
-                    <h3 class="exp-role">Trainee</h3>
+                    <h3 class="exp-role">IT Support Intern</h3>
+                    <span class="exp-year">July 1 – August 15, 2024</span>
                 </div>
-                <p class="exp-company">National Telecommunication Institute (NTI), Egypt</p>
+                <p class="exp-company">Egyptian Contracting Company | Dokki, Egypt</p>
                 <ul class="exp-list">
-                    <li>Completed intensive training in Cyber Security and Networking.</li>
-                    <li>Utilized Kali Linux and Huawei eNSP for network simulations.</li>
-                    <li>Strengthened understanding of network infrastructure and threat mitigation.</li>
-                    <li>Earned CCNA certification and applied routing, switching, and network design in lab
-                        environments.</li>
+                    <li>Performed maintenance and technical support for computer hardware and network equipment across
+                        the organization's IT infrastructure.</li>
+                    <li>Assisted in designing and organizing database structures to support internal operations,
+                        applying SQL fundamentals under supervision.</li>
+                    <li>Completed the training period with an excellent performance evaluation from the company's
+                        training department.</li>
                 </ul>
             </div>
         </div>
@@ -232,51 +246,119 @@
     <section id="projects" class="section projects-section">
         <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
-            
+
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.21.22 PM.jpeg"
-                        alt="Arduino RC Car">
+                    <img src="assets/images/projects/project-security-alert.jpg"
+                        alt="Screenshot of the Automated Security Alert log-monitoring tool">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Arduino RC Car</h3>
-                    <p class="project-description">Mobile-controlled car using Arduino & Bluetooth for remote movement
-                        and control.</p>
+                    <h3 class="project-title">Automated Security Alert</h3>
+                    <p class="project-description">Python-based monitoring tool that parses system logs in real time,
+                        flags anomalous behavior, and triggers instant alerts — simulating core SOC alert workflows.</p>
                     <div class="project-tags">
-                        <span>Arduino</span>
-                        <span>Bluetooth</span>
-                        <span>Embedded</span>
+                        <span>Python</span>
+                        <span>Bash</span>
+                        <span>Linux</span>
+                        <span>SOC</span>
                     </div>
                     <div class="project-actions">
-                        <a href="#" class="btn-project">View Project →</a>
+                        <button type="button" class="btn-project js-project-details"
+                            data-project-title="Automated Security Alert"
+                            data-project-body="Engineered a Python-based security monitoring tool that parses system logs in real time, automatically flagging anomalous behavior and triggering instant alerts across multiple log sources. This reduces manual detection effort and replicates how a SOC triages alerts from log sources.">View details →</button>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.24.12 PM.jpeg"
-                        alt="Website Checker">
+                    <img src="assets/images/projects/project-linux-hardening.jpg"
+                        alt="Linux server hardening checklist with firewall and SSH settings">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Linux Server Hardening</h3>
+                    <p class="project-description">Security configurations on Linux servers including firewall rules,
+                        SSH hardening, user access controls, and system monitoring.</p>
+                    <div class="project-tags">
+                        <span>Linux</span>
+                        <span>Security</span>
+                        <span>Firewall</span>
+                        <span>SSH</span>
+                    </div>
+                    <div class="project-actions">
+                        <button type="button" class="btn-project js-project-details"
+                            data-project-title="Linux Server Hardening"
+                            data-project-body="Implemented security configurations on Linux servers, including firewall rules, SSH hardening, user access controls, and system monitoring, to reduce the attack surface and strengthen server resilience.">View details →</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/images/projects/project-hospital.svg"
+                        alt="Hospital Appointment System dashboard illustration">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Hospital Appointment System</h3>
+                    <p class="project-description">Appointment booking system that stores patient records and schedules
+                        using Python and SQL, with structured data handling similar to SOC case tracking.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/moemenshendia0-tech/HMAS" class="btn-project" target="_blank"
+                            rel="noopener">View Project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/images/projects/project-edge-detection.svg"
+                        alt="OpenCV edge detection model preview with original and processed frames">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Edge Detection Model</h3>
+                    <p class="project-description">Computer-vision pipeline in Python and OpenCV that detects edges in
+                        images — useful for visual anomaly spotting and image-based analysis.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/moemenshendia0-tech/edge-detection-model" class="btn-project"
+                            target="_blank" rel="noopener">View Project →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/images/projects/project-website-checker.jpg"
+                        alt="Website uptime checker running in a Linux terminal">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Website Checker</h3>
-                    <p class="project-description">Linux-based tool to monitor website uptime and basic availability
-                        status.</p>
+                    <p class="project-description">Bash/Python CLI that monitors web services, logs downtime with
+                        timestamps, and triggers alerts — similar to SOC availability monitoring.</p>
                     <div class="project-tags">
                         <span>Linux</span>
                         <span>Bash</span>
-                        <span>Monitoring</span>
+                        <span>Python</span>
                     </div>
                     <div class="project-actions">
-                        <a href="#" class="btn-project">View Project →</a>
+                        <button type="button" class="btn-project js-project-details"
+                            data-project-title="Website Checker"
+                            data-project-body="Built a Bash/Python command-line tool that continuously monitors web services, logs downtime events with precise timestamps, and triggers automated alerts, replicating SOC-level service availability monitoring.">View details →</button>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.24.12 PM (2).jpeg"
-                        alt="Ping Test Tool">
+                    <img src="assets/images/projects/project-ping-test.jpg"
+                        alt="Network ping test tool showing latency results">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Ping Test Tool</h3>
@@ -284,38 +366,43 @@
                         multiple targets.</p>
                     <div class="project-tags">
                         <span>Networking</span>
-                        <span>Ping</span>
+                        <span>Python</span>
                         <span>Automation</span>
                     </div>
                     <div class="project-actions">
-                        <a href="#" class="btn-project">View Project →</a>
+                        <button type="button" class="btn-project js-project-details"
+                            data-project-title="Ping Test Tool"
+                            data-project-body="Network Connectivity Tester written in Python. It pings multiple hosts, records latency and packet loss, and helps diagnose connectivity issues the way a SOC or network analyst would during an incident.">View details →</button>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.24.11 PM (1).jpeg"
-                        alt="Security Alert">
+                    <img src="assets/images/projects/project-rc-car.jpg"
+                        alt="Arduino Bluetooth RC car project on a workbench">
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Automated Security Alert</h3>
-                    <p class="project-description">Real-time alert system that detects suspicious activity and notifies
-                        the user instantly.</p>
+                    <h3 class="project-title">Arduino RC Car</h3>
+                    <p class="project-description">Mobile-controlled car using Arduino and Bluetooth for remote movement
+                        and control.</p>
                     <div class="project-tags">
-                        <span>Security</span>
-                        <span>Automation</span>
-                        <span>Alerts</span>
+                        <span>Arduino</span>
+                        <span>Bluetooth</span>
+                        <span>Embedded</span>
                     </div>
                     <div class="project-actions">
-                        <a href="#" class="btn-project">View Project →</a>
+                        <button type="button" class="btn-project js-project-details"
+                            data-project-title="Arduino RC Car"
+                            data-project-body="A mobile-controlled car built with Arduino and Bluetooth. The project covers embedded programming, wireless control, and hardware troubleshooting.">View details →</button>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.20.42 PM.jpeg" alt="Subway Game">
+                    <img src="assets/images/projects/project-subway-game.jpg"
+                        alt="Subway-style 2D game with obstacles and scoring">
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Subway Game</h3>
@@ -327,29 +414,9 @@
                         <span>Graphics</span>
                     </div>
                     <div class="project-actions">
-                        <a href="#" class="btn-project">View Project →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="assets/images/projects/WhatsApp Image 2026-02-21 at 11.20.42 PM (1).jpeg"
-                        alt="Linux Server Hardening">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Linux Server Hardening</h3>
-                    <p class="project-description">Implemented security configurations on Linux servers including
-                        firewall rules, SSH hardening, user access controls, and system monitoring.</p>
-                    <div class="project-tags">
-                        <span>Linux</span>
-                        <span>Security</span>
-                        <span>Firewall</span>
-                        <span>SSH</span>
-                        <span>Monitoring</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="#" class="btn-project">View Project →</a>
+                        <button type="button" class="btn-project js-project-details"
+                            data-project-title="Subway Game"
+                            data-project-body="A 2D graphics-based game with scoring, obstacles, and restart features. Built to practice game loops, collision detection, and user interaction.">View details →</button>
                     </div>
                 </div>
             </div>
@@ -361,103 +428,139 @@
         <h2 class="section-title">Certificates</h2>
         <div class="certificates-grid">
             
-            <div class="certificate-item" data-cert-src="assets/certificates/CCNA.jpeg"
-                data-cert-title="CCNA Routing and Switching">
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-ccna.jpg"
+                data-cert-title="CCNA Routing and Switching — National Telecommunication Institute (NTI)">
                 <div class="certificate-image-wrap">
-                    <img src="assets/certificates/CCNA.jpeg" alt="CCNA Routing and Switching Certificate">
+                    <img src="assets/certificates/cert-ccna.jpg"
+                        alt="CCNA Routing and Switching certificate from the National Telecommunication Institute">
                 </div>
+                <p class="certificate-caption">
+                    <strong>CCNA Routing and Switching</strong>
+                    National Telecommunication Institute (NTI)
+                </p>
             </div>
 
-            
-            <div class="certificate-item" data-cert-src="assets/certificates/AI.jpeg"
-                data-cert-title="Artificial Intelligence">
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-ai-huawei.jpg"
+                data-cert-title="Artificial Intelligence — Huawei">
                 <div class="certificate-image-wrap">
-                    <img src="assets/certificates/AI.jpeg" alt="Artificial Intelligence Certificate">
+                    <img src="assets/certificates/cert-ai-huawei.jpg"
+                        alt="Artificial Intelligence certificate from Huawei">
                 </div>
+                <p class="certificate-caption">
+                    <strong>Artificial Intelligence</strong>
+                    Huawei
+                </p>
             </div>
 
-            
-            <div class="certificate-item" data-cert-src="assets/certificates/security.jpeg"
-                data-cert-title="Cyber Security & Networking">
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-cybersecurity-networking.jpg"
+                data-cert-title="HCIA-Security / Cybersecurity &amp; Networking — NTI">
                 <div class="certificate-image-wrap">
-                    <img src="assets/certificates/security.jpeg" alt="Cyber Security & Networking Certificate">
+                    <img src="assets/certificates/cert-cybersecurity-networking.jpg"
+                        alt="HCIA-Security and cybersecurity networking certificate from NTI">
                 </div>
+                <p class="certificate-caption">
+                    <strong>HCIA-Security / Cybersecurity &amp; Networking</strong>
+                    National Telecommunication Institute (NTI)
+                </p>
             </div>
 
-            
-            <div class="certificate-item"
-                data-cert-src="assets/certificates/WhatsApp%20Image%202025-09-22%20at%204.31.05%20PM.jpeg"
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-technical-training.jpg"
                 data-cert-title="Technical Training">
                 <div class="certificate-image-wrap">
-                    <img src="assets/certificates/WhatsApp%20Image%202025-09-22%20at%204.31.05%20PM.jpeg"
-                        alt="Technical Training Certificate">
+                    <img src="assets/certificates/cert-technical-training.jpg"
+                        alt="Technical training certificate">
                 </div>
+                <p class="certificate-caption">
+                    <strong>Technical Training</strong>
+                    Training program certificate
+                </p>
             </div>
 
-            
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-it-skills-career.jpg"
+                data-cert-title="IT Skills &amp; Career Development">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/cert-it-skills-career.jpg"
+                        alt="IT skills and career development certificate">
+                </div>
+                <p class="certificate-caption">
+                    <strong>IT Skills &amp; Career Development</strong>
+                    Career development program
+                </p>
+            </div>
+
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-security-fundamentals.jpg"
+                data-cert-title="Cybersecurity Fundamentals">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/cert-security-fundamentals.jpg"
+                        alt="Cybersecurity fundamentals certificate">
+                </div>
+                <p class="certificate-caption">
+                    <strong>Cybersecurity Fundamentals</strong>
+                    Networking &amp; security training
+                </p>
+            </div>
+
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-digital-marketing.jpg"
+                data-cert-title="Digital Marketing — Banque Misr &amp; Google">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/cert-digital-marketing.jpg"
+                        alt="Digital marketing certificate from Banque Misr and Google Skills">
+                </div>
+                <p class="certificate-caption">
+                    <strong>Digital Marketing</strong>
+                    Banque Misr &amp; Google Skills
+                </p>
+            </div>
+
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-mokhtar-ibrahim.jpg"
+                data-cert-title="IT Training — Egyptian Contracting Company (Mokhtar Ibrahim)">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/cert-mokhtar-ibrahim.jpg"
+                        alt="IT training certificate from Egyptian Contracting Company, Mokhtar Ibrahim">
+                </div>
+                <p class="certificate-caption">
+                    <strong>IT Training</strong>
+                    Egyptian Contracting Company – Mokhtar Ibrahim · 2024
+                </p>
+            </div>
+
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-british-university.jpg"
+                data-cert-title="Artificial Intelligence — The British University in Egypt">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/cert-british-university.jpg"
+                        alt="Artificial Intelligence certificate from The British University in Egypt">
+                </div>
+                <p class="certificate-caption">
+                    <strong>Artificial Intelligence</strong>
+                    The British University in Egypt
+                </p>
+            </div>
+
+            <div class="certificate-item" data-cert-src="assets/certificates/cert-gupco-training.jpg"
+                data-cert-title="IT Training — GUPCO">
+                <div class="certificate-image-wrap">
+                    <img src="assets/certificates/cert-gupco-training.jpg"
+                        alt="GUPCO summer IT and telecommunications training certificate">
+                </div>
+                <p class="certificate-caption">
+                    <strong>IT Training — GUPCO</strong>
+                    Gulf of Suez Petroleum Company · July–August 2026
+                </p>
+            </div>
+
             <div class="certificate-item"
-                data-cert-src="assets/certificates/WhatsApp%20Image%202025-11-10%20at%2012.08.49%20PM.jpeg"
-                data-cert-title="IT Skills & Career Development">
-                <div class="certificate-image-wrap">
-                    <img src="assets/certificates/WhatsApp%20Image%202025-11-10%20at%2012.08.49%20PM.jpeg"
-                        alt="IT Skills & Career Development">
-                </div>
-            </div>
-
-            
-            <div class="certificate-item" data-cert-src="assets/certificates/شهادتي.jpeg"
-                data-cert-title="Cybersecurity / Networking">
-                <div class="certificate-image-wrap">
-                    <img src="assets/certificates/شهادتي.jpeg" alt="Cybersecurity / Networking Certificate">
-                </div>
-            </div>
-
-            
-            <div class="certificate-item"
-                data-cert-src="assets/certificates/شهاده%20بنك%20مصر%20و%20مهارات%20من%20جوجل.jpeg"
-                data-cert-title="Digital Marketing">
-                <div class="certificate-image-wrap">
-                    <img src="assets/certificates/شهاده%20بنك%20مصر%20و%20مهارات%20من%20جوجل.jpeg"
-                        alt="Digital Marketing Certificate">
-                </div>
-            </div>
-
-            
-            <div class="certificate-item" data-cert-src="assets/certificates/مختار%20ابارهيم.jpg"
-                data-cert-title="Technical Training">
-                <div class="certificate-image-wrap">
-                    <img src="assets/certificates/مختار%20ابارهيم.jpg" alt="Technical Training Certificate">
-                </div>
-            </div>
-
-            
-            <div class="certificate-item" data-cert-src="assets/certificates/britich.jpeg"
-                data-cert-title="British Certificate">
-                <div class="certificate-image-wrap">
-                    <img src="assets/certificates/britich.jpeg" alt="British Certificate">
-                </div>
-            </div>
-
-            
-            <div class="certificate-item"
-                data-cert-src="assets/certificates/%D8%AC%D8%A7%D8%A8%D9%83%D9%88.jpeg"
-                data-cert-title="GUPCO Summer Training — IT & Telecommunication">
-                <div class="certificate-image-wrap">
-                    <img src="assets/certificates/%D8%AC%D8%A7%D8%A8%D9%83%D9%88.jpeg"
-                        alt="GUPCO Summer Training Certificate">
-                </div>
-            </div>
-
-            
-            <div class="certificate-item"
-                data-cert-src="assets/certificates/cyber%20for%20beginners.pdf"
-                data-cert-title="Cybersecurity for Beginners">
+                data-cert-src="assets/certificates/cert-cybersecurity-for-beginners.pdf"
+                data-cert-title="Cybersecurity for Beginners — Mahara-Tech (ITI Platform)">
                 <div class="certificate-image-wrap certificate-pdf-wrap">
                     <div class="certificate-pdf-preview">
                         <span class="certificate-pdf-badge">PDF</span>
                         <strong>Cybersecurity for Beginners</strong>
                     </div>
                 </div>
+                <p class="certificate-caption">
+                    <strong>Cybersecurity for Beginners</strong>
+                    Mahara-Tech (ITI Platform)
+                </p>
             </div>
         </div>
     </section>
@@ -469,6 +572,16 @@
             <button type="button" class="certificate-modal-close" id="certificateModalClose"
                 aria-label="Close">&times;</button>
             <img class="certificate-modal-img" id="certificateModalImg" src="" alt="">
+        </div>
+    </div>
+
+    <div class="certificate-modal" id="projectModal" aria-hidden="true">
+        <div class="certificate-modal-backdrop" id="projectModalBackdrop"></div>
+        <div class="certificate-modal-box project-modal-box">
+            <button type="button" class="certificate-modal-close" id="projectModalClose"
+                aria-label="Close">&times;</button>
+            <h3 class="project-modal-title" id="projectModalTitle"></h3>
+            <p class="project-modal-body" id="projectModalBody"></p>
         </div>
     </div>
     
@@ -502,11 +615,12 @@
             </div>
             
             <div class="contact-form-column">
-                <form class="contact-form" action="https://formsubmit.co/moemen.mohamed.it@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New message from Portfolio!">
-                    <input type="hidden" name="_captcha" value="false">
+                <form class="contact-form" id="contactForm"
+                    action="https://formsubmit.co/ajax/moemen.mohamed.it@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New message from Portfolio">
                     <input type="hidden" name="_template" value="box">
-                    <input type="hidden" name="_next" value="https://moemenshendia0-tech.github.io/portfolio/">
+                    <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off"
+                        aria-hidden="true">
                     <div class="form-row">
                         <div class="form-field">
                             <label for="name">Name</label>
@@ -522,7 +636,8 @@
                         <textarea name="message" id="message" rows="4" placeholder="Write your message here"
                             required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
+                    <button type="submit" class="btn btn-primary form-submit" id="formSubmit">Send Message</button>
                 </form>
             </div>
         </div>
@@ -533,8 +648,8 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h3>Moemen Mohamed</h3>
-                <p class="footer-text">Cybersecurity &amp; Networking student passionate about building secure systems,
-                    solving complex problems, and growing in the field of Information Security.</p>
+                <p class="footer-text">Entry-level SOC analyst and Computer Science student focused on threat detection,
+                    secure systems, and growing in information security.</p>
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
@@ -559,6 +674,7 @@
             </div>
         </div>
         <p class="footer-bottom">© <span id="year"></span> Moemen Mohamed. All rights reserved.</p>
+        <p class="footer-updated">Last updated: August 27, 2026</p>
     </footer>
 
     <script src="script.js" defer></script>

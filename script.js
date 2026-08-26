@@ -10,6 +10,13 @@
     } else {
         body.classList.remove('dark-mode');
     }
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.setAttribute(
+            'aria-label',
+            body.classList.contains('dark-mode') ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+    }
 
     function closeMobileMenu() {
         const navToggle = document.getElementById('navToggle');
@@ -52,6 +59,10 @@
         e.stopPropagation();
         body.classList.toggle('dark-mode');
         localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+        this.setAttribute(
+            'aria-label',
+            body.classList.contains('dark-mode') ? 'Switch to light mode' : 'Switch to dark mode'
+        );
     });
 
     document.getElementById('navToggle')?.addEventListener('click', function (e) {
@@ -126,9 +137,112 @@
         if (e.key !== 'Escape') return;
         if (certificateModal?.classList.contains('open')) {
             closeCertificateModal();
+        } else if (document.getElementById('projectModal')?.classList.contains('open')) {
+            closeProjectModal();
         } else {
             closeMobileMenu();
         }
+    });
+
+    // ===== Project details modal (for projects without a public repo) =====
+    const projectModal = document.getElementById('projectModal');
+    const projectModalTitle = document.getElementById('projectModalTitle');
+    const projectModalBody = document.getElementById('projectModalBody');
+
+    function openProjectModal(title, bodyText) {
+        if (!projectModal) return;
+        if (projectModalTitle) projectModalTitle.textContent = title || '';
+        if (projectModalBody) projectModalBody.textContent = bodyText || '';
+        projectModal.classList.add('open');
+        projectModal.setAttribute('aria-hidden', 'false');
+        body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+        if (!projectModal) return;
+        projectModal.classList.remove('open');
+        projectModal.setAttribute('aria-hidden', 'true');
+        body.style.overflow = '';
+    }
+
+    document.getElementById('projectModalClose')?.addEventListener('click', closeProjectModal);
+    document.getElementById('projectModalBackdrop')?.addEventListener('click', closeProjectModal);
+
+    document.querySelectorAll('.js-project-details').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            openProjectModal(
+                btn.getAttribute('data-project-title'),
+                btn.getAttribute('data-project-body')
+            );
+        });
+    });
+
+    // ===== Contact form (FormSubmit AJAX) =====
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const formSubmit = document.getElementById('formSubmit');
+
+    function setFormStatus(type, message) {
+        if (!formStatus) return;
+        formStatus.hidden = false;
+        formStatus.className = 'form-status ' + type;
+        formStatus.textContent = message;
+    }
+
+    contactForm?.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const honey = contactForm.querySelector('[name="_honey"]');
+        if (honey && honey.value) {
+            setFormStatus('success', 'Thanks — your message was sent.');
+            contactForm.reset();
+            return;
+        }
+
+        const payload = {
+            name: contactForm.name.value,
+            email: contactForm.email.value,
+            message: contactForm.message.value,
+            _subject: 'New message from Portfolio'
+        };
+
+        if (formSubmit) {
+            formSubmit.disabled = true;
+            formSubmit.textContent = 'Sending...';
+        }
+
+        fetch('https://formsubmit.co/ajax/moemen.mohamed.it@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+            .then(function (res) {
+                return res.json().then(function (data) {
+                    return { ok: res.ok, data: data };
+                });
+            })
+            .then(function (result) {
+                if (result.ok && result.data && result.data.success !== 'false') {
+                    setFormStatus('success', 'Message sent. I will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    throw new Error((result.data && result.data.message) || 'Send failed');
+                }
+            })
+            .catch(function () {
+                setFormStatus(
+                    'error',
+                    'Could not send the message. Please email moemen.mohamed.it@gmail.com directly.'
+                );
+            })
+            .finally(function () {
+                if (formSubmit) {
+                    formSubmit.disabled = false;
+                    formSubmit.textContent = 'Send Message';
+                }
+            });
     });
 
     // ===== Particles — Home فقط، أخف + يتوقف لما القسم مش ظاهر =====

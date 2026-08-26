@@ -61,12 +61,21 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
+     gap: 1rem;
  }
 
  .nav-logo {
      font-weight: 700;
      font-size: 1.4rem;
      color: var(--primary);
+ }
+
+ .nav-end {
+     display: flex;
+     align-items: center;
+     gap: 0.65rem;
+     z-index: 1102;
+     flex-shrink: 0;
  }
 
  .nav-menu {
@@ -699,6 +708,8 @@
  .exp-header {
      display: flex;
      align-items: center;
+     justify-content: space-between;
+     flex-wrap: wrap;
      gap: 0.75rem;
      margin-bottom: 0.25rem;
  }
@@ -835,7 +846,12 @@
      font-size: 0.92rem;
      font-weight: 600;
      padding: 0.35rem 0;
+     border: none;
      border-bottom: 2px solid var(--highlight-light);
+     background: none;
+     cursor: pointer;
+     font-family: inherit;
+     text-align: left;
      transition: color 0.2s, border-color 0.2s, padding-left 0.2s;
  }
 
@@ -921,6 +937,38 @@
      font-size: 0.95rem;
      font-weight: 600;
      line-height: 1.35;
+ }
+
+ .certificate-caption {
+     margin-top: 0.7rem;
+     width: 100%;
+     text-align: center;
+     font-size: 0.82rem;
+     line-height: 1.4;
+     color: var(--text-secondary);
+ }
+
+ .certificate-caption strong {
+     display: block;
+     color: var(--primary);
+     font-size: 0.88rem;
+     margin-bottom: 0.15rem;
+ }
+
+ .project-modal-box {
+     padding: 2.5rem 1.75rem 1.75rem;
+     max-width: min(560px, 92vw);
+ }
+
+ .project-modal-title {
+     color: var(--primary);
+     margin-bottom: 0.85rem;
+     font-size: 1.25rem;
+ }
+
+ .project-modal-body {
+     color: var(--text-secondary);
+     line-height: 1.7;
  }
 
  /* ===== Certificate Modal (lightbox) ===== */
@@ -1054,6 +1102,7 @@
      box-shadow: var(--card-shadow);
      border: 1px solid var(--border-subtle);
      padding: 1.8rem;
+     position: relative;
  }
 
  .contact-form {
@@ -1102,6 +1151,34 @@
      margin-top: 0.5rem;
  }
 
+ .form-honeypot {
+     position: absolute;
+     left: -9999px;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+ }
+
+ .form-status {
+     margin: 0;
+     font-size: 0.9rem;
+     line-height: 1.45;
+     padding: 0.65rem 0.8rem;
+     border-radius: 8px;
+ }
+
+ .form-status.success {
+     background: rgba(96, 153, 102, 0.18);
+     color: var(--primary);
+     border: 1px solid rgba(96, 153, 102, 0.35);
+ }
+
+ .form-status.error {
+     background: rgba(180, 60, 60, 0.12);
+     color: #8a2b2b;
+     border: 1px solid rgba(180, 60, 60, 0.3);
+ }
+
  /* ===== Footer ===== */
  .footer {
      padding: 2.5rem 1.5rem 1.5rem;
@@ -1142,6 +1219,14 @@
 
  .footer-bottom {
      text-align: center;
+ }
+
+ .footer-updated {
+     text-align: center;
+     margin-top: 0.35rem;
+     font-size: 0.8rem;
+     color: var(--text-secondary);
+     opacity: 0.85;
  }
 
  /* ===== Responsive - Tablet ===== */
@@ -1228,10 +1313,10 @@
          color: var(--highlight);
      }
 
-     .nav-menu .theme-toggle {
-         margin: 1rem auto 0;
-         width: 48px;
-         height: 48px;
+     .theme-toggle {
+         width: 44px;
+         height: 44px;
+         flex-shrink: 0;
      }
 
      body.menu-open {
@@ -1405,6 +1490,24 @@
  body.dark-mode .certificate-item {
      background: #2a3a2a;
      border: 1px solid rgba(164, 190, 123, 0.3);
+ }
+
+ body.dark-mode .certificate-caption {
+     color: #d0e0c0;
+ }
+
+ body.dark-mode .certificate-caption strong {
+     color: #EDF1D6;
+ }
+
+ body.dark-mode .form-status.error {
+     background: rgba(220, 90, 90, 0.18);
+     color: #f0c0c0;
+     border-color: rgba(220, 90, 90, 0.4);
+ }
+
+ body.dark-mode .project-modal-title {
+     color: #EDF1D6;
  }
 
  body.dark-mode .contact-card {
