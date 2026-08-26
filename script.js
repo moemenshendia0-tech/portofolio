@@ -113,7 +113,12 @@
         item.addEventListener('click', function () {
             const src = item.getAttribute('data-cert-src');
             const title = item.getAttribute('data-cert-title') || '';
-            if (src) openCertificateModal(src, title);
+            if (!src) return;
+            if (/\.pdf$/i.test(src)) {
+                window.open(src, '_blank', 'noopener');
+                return;
+            }
+            openCertificateModal(src, title);
         });
     });
 

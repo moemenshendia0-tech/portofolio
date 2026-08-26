@@ -517,6 +517,10 @@
      object-fit: cover;
  }
 
+ .home-image-placeholder img {
+     object-position: center 18%;
+ }
+
  .photo-placeholder {
      width: 100%;
      height: 100%;
@@ -882,6 +886,41 @@
  .certificate-item:hover {
      transform: translateY(-4px);
      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+ }
+
+ .certificate-pdf-wrap {
+     display: flex;
+ }
+
+ .certificate-pdf-preview {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 0.75rem;
+     padding: 1rem;
+     text-align: center;
+     background: linear-gradient(160deg, var(--shadow) 0%, var(--bg-card) 100%);
+     color: var(--primary);
+ }
+
+ .certificate-pdf-badge {
+     display: inline-block;
+     padding: 0.2rem 0.6rem;
+     border-radius: 6px;
+     font-size: 0.75rem;
+     font-weight: 700;
+     letter-spacing: 0.06em;
+     background: var(--primary);
+     color: #fff;
+ }
+
+ .certificate-pdf-preview strong {
+     font-size: 0.95rem;
+     font-weight: 600;
+     line-height: 1.35;
  }
 
  /* ===== Certificate Modal (lightbox) ===== */
